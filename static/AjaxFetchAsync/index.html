@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Async / Await</title>
+    <style>
+        .card {
+            width: 50%;
+            margin: 2%;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Batman! TV Series</h1>
+    <h2>Peticions amb callbacks, promeses i async-await</h2>
+    <h3>Diferents métodes per accedir a les series de Batman</h3>
+    <h3>Una vegada el servidor ens mostra aquesta pantalla, tots els 'buttons'</h3>
+    <h3>accedeixen a les series desde el client. El servidor no fa cap accés.</h3>
+
+    <p><a href="/static/index.html">Retornar</a></p>
+    <div>
+        <button id="btn1" name="button">Callbacks</button>
+        <button id="btn2" name="button">Promesas</button>
+        <button id="btn3" name="button">Async/Await</button>
+    </div>
+    <hr>
+    <h2 id="subtitul"></h2>
+    <h3> Aquí es veurás el resultat</h3>
+    <div id="resultats"></div>
+
+    <!-- <script type="module" src="MyFrameworkClient.js"></script> -->
+    <script src="../MyFrameworkClient.js"></script>
+    <script src="index.js" type="module"></script>
+
+
+</body>
+
+</html>

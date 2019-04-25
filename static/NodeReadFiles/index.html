@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Node http-fetch-axios</title>
+    <style>
+        img {
+            width: 50%;
+            height: auto;
+            margin: 2%;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Peticions(( Client: fetch/async --- Server: readfile com a 'promise' )) </h1>
+    <h2>Peticions al servidor amb 'fetch i async'</h2>
+    <h3>Una vegada el servidor ens mostra aquesta pantalla, tots els 'buttons'</h3>
+    <h3>criden al servidor perque ens envii el resultat ja montat.</h3>
+    <h3>El servidor solament llegeix fitxers e imatges que ja tenim grabats</h3>
+
+    <p><a href="/static/index.html">Retornar</a></p>
+    <div>
+        <button id="btn1" name="button">Llegir fitxer html</button>
+        <button id="btn2" name="button">Llegir fitxer texte</button>
+        <button id="btn3" name="button">Llegir imatge</button>
+    </div>
+    <hr>
+    <h2 id="subtitul"></h2>
+    <h3> Aquí es veurás el resultat</h3>
+    <div id="resultats"></div>
+
+    <!-- <script type="module" src="MyFrameworkClient.js"></script> -->
+    <!-- <script src="MyFrameworkClient.js"></script> -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

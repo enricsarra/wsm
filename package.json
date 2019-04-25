@@ -1,0 +1,16 @@
+{
+  "name": "wsm",
+  "version": "1.0.0",
+  "description": "Node basic",
+  "main": "wsm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Enric",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-fetch": "^2.3.0"
+  }
+}
