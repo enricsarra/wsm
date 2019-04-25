@@ -61,3 +61,5 @@ typings/
 .next
 # phpstorm
 .idea/
+#.DS_Store
+.DS_Store
