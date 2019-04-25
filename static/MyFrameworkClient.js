@@ -358,9 +358,3 @@ Object.defineProperty(MyFramework.Utils.Templates, 'templater', { writable: fals
 // ----------------------------------
 // Exportacions
 // ----------------------------------
-
-// module.exports.IsTypeF = MyFramework.Utils.IsTypeF;
-//export const MY_CONST = '234';
-/* export const tags = {
-    MY_CONST : MY_CONST
-  } */
