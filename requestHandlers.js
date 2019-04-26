@@ -144,10 +144,11 @@ const montarHtmlBatmanSuperman = (contentFile) => {
     <p> <span> name : ${'name'}</span></p>
     <p> <span> score : ${'score'}</span></p>
     <p> <span> url : ${'url'}</span></p>
-    <p> <span> image : ${'image' }</span></p>
+    <p> <span> image : <a href=${'image' }>Enllaç a la imatge</a></span></p>
     <p> <span> premiered : ${'premiered'}</span></p>
     <br>
 `;
+
     // per cada usuari construim la template i retornem el html montat
     let myTemplateUsers = subContentFile.map(user => userTemplate(user)).join('\n');
     return myTemplateUsers

@@ -63,3 +63,6 @@ typings/
 .idea/
 #.DS_Store
 .DS_Store
+# arxius .json 
+static/NodeHttpFetchAxios/*.json
+
