@@ -81,7 +81,8 @@ function inici() {
 
 function montarLlistat(llistat, container) {
     //--------
-    const templater = MyFramework.Utils.Templates.templater;
+    //  MyFrameworkClient.js no funciona al Safari
+    /* const templater = MyFramework.Utils.Templates.templater;
     const imgTemplate = templater `<figure>
     <img alt="${ 'name' }" src="${ 'src' }">
     <figcaption>${ 'caption' }</figcaption>
@@ -94,7 +95,7 @@ function montarLlistat(llistat, container) {
     };
     const myTemplate = imgTemplate(img1);
     console.info(myTemplate);
-
+ */
     //--------
 
 

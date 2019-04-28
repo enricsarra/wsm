@@ -228,7 +228,7 @@ function staticPages(response, pathname, postData, _extname) {
     let rutaPerStaticPages = "";
     let arrayRuta = [];
     if (pathname == "/") {
-        rutaPerStaticPages = "static/index.html"
+        rutaPerStaticPages = "static/index/index.html"
     } else {
         arrayRuta = pathname.split("/"); // "/static/index.html"  ----->  ["", "static", "index.html"]
         arrayRuta.shift(); // ["", "static", "index.html"] -----> ["static", "index.html"]
