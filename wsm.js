@@ -56,6 +56,7 @@
 //          - btn2: crida a url = /llistardirectori' per visualitzar els fitxers del directori wsm
 //  1.1.o - Modificar '/static/index/index.html' per complicarla a nivell de css i practicar
 //          amb 'position'.
+//  2.0.0 - Primera fase complerta 
 //          
 
 
