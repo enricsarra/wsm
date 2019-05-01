@@ -8,6 +8,8 @@ addEventListener('load', inici);
 function inici() {
 
     const url = "http://api.tvmaze.com/search/shows?q=batman";
+    const urlSuperman = "http://api.tvmaze.com/search/shows?q=superman";
+    const urlGirls = "http://api.tvmaze.com/search/shows?q=girls";
     const url404 = "https://jsonplaceholder.typicode.com/otroendpoint";
     const resultats = document.querySelector("#resultats");
     const subtitul = document.querySelector("#subtitul");
@@ -39,7 +41,7 @@ function inici() {
         subtitul.innerText = "Promeses loading";
 
 
-        fetch(url)
+        fetch(urlSuperman)
             .then(response => {
                 if (response.status !== 200) throw new Error(response.status);
                 return response.json()
@@ -58,7 +60,7 @@ function inici() {
 
         try {
             //recordar declarar el callback amb async
-            const respuesta = await fetch(url);
+            const respuesta = await fetch(urlGirls);
             if (respuesta.status !== 200) throw new Error(respuesta.status);
             const llistat = await respuesta.json();
             montarLlistat(llistat, resultats);
