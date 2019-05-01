@@ -1,13 +1,5 @@
 // Arranquem servidor
 
-// versions :
-//  1.1.b - posem el port a ".env" - npm install dotenv --save
-//  1.1.c - posem timestamp en el missatge de engegada
-//  1.1.d - importem modul MyDate del MyFramework per posar el timestamp
-//           i esborrar les funcions yyyymmdd i hhmmss de Date()
-//  1.1.e - modifiquem el timestamp per utilitzar MyDate
-//  1.1.f - eliminem modul Dotenv i recuperem port del MyFramework
-
 const myVersio = "v 1.1.f";
 
 const http = require("http");

@@ -31,9 +31,6 @@ function inici() {
 
             // preparem acció per quan fem el 'submit'
 
-
-            // de moment no se insertar la resposta de 'uploadFormulari1'
-            // a continuació del formulari.
             const formulari = document.getElementsByTagName('form');
             const inputEnviar = formulari[0].querySelector('[type]');
             inputEnviar.addEventListener('click', async() => {
