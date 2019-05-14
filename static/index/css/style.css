@@ -7,14 +7,27 @@ body {
 }
 
 h3 {
-    font-family: 'Nunito';
-    font-size: 2em;
-    margin-bottom: .4em;
-    text-transform: uppercase;
+    /* font: bold 4em Helvetica, Verdana, sans-serif; */
+    font: 4em Helvetica, Verdana, sans-serif;
+    text-shadow: 0 2px 0 #b4c1cd, 0 4px 0 #a0b1bf, 0 6px 0 #8ca0b2, 0 8px 0 #778fa4, 3px 8px 15px rgba(0, 0, 0, 0.1), 3px 8px 5px rgba(0, 0, 0, 0.3);
 }
 
 p {
-    font-size: 1.6em;
+    /* font: bold 1.9em Helvetica, Verdana, sans-serif; */
+    font: bold 1.9em Helvetica, Verdana, sans-serif;
+    text-shadow: 0 2px 0 #b4c1cd, 0 3px 0 #a0b1bf, 0 4px 0 #8ca0b2, 0 5px 0 #778fa4, 0px 9px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.3);
+    /* font-size: 1.6em; */
+}
+
+h3,
+p {
+    /* font: bold 100px/1 Helvetica, Verdana, sans-serif; */
+    font-family: 'Sansita One', cursive;
+    text-transform: none;
+    /*font-weight: 400;*/
+    margin-bottom: .4em;
+    /* text-transform: uppercase; */
+    color: #c8d2da;
 }
 
 section {
