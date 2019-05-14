@@ -57,7 +57,7 @@
 //  1.1.o - Modificar '/static/index/index.html' per complicarla a nivell de css i practicar
 //          amb 'position'.
 //  2.0.0 - Primera fase complerta 
-//          
+//  2.1.a - Lletra 'sansita' 3D a les pagines principals     
 
 
 const terminator = require('./MyFramework').terminator;
