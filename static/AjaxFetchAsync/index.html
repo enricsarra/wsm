@@ -15,13 +15,15 @@
 </head>
 
 <body>
-    <h1>Batman! TV Series</h1>
+    <h1> TV Series</h1>
     <h2>Peticions amb callbacks, promeses i async-await</h2>
     <h3>Diferents métodes per accedir a les series de Batman, Superman, Girls</h3>
     <h3>Una vegada el servidor ens mostra aquesta pantalla, tots els 'buttons'</h3>
     <h3>accedeixen a les series desde el client. El servidor no fa cap accés.</h3>
 
-    <p><a href="/static/index/index.html">Inici</a></p>
+    <p><a href="/static/index/index.html">Retornar</a></p>
+    <p><a id="inici" href="#">Inici</a></p>
+
     <div>
         <button id="btn1" name="button">Callbacks-Batman</button>
         <button id="btn2" name="button">Promesas-Superman</button>
@@ -34,7 +36,8 @@
 
     <!-- <script type="module" src="MyFrameworkClient.js"></script> -->
     <script src="/static/MyFrameworkClient.js"></script>
-    <script src="index.js" type="module"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script src="index.js"></script>
 
 
 </body>

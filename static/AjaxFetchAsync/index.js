@@ -1,7 +1,5 @@
-/*
-  Executem tot al client.
-  No es fá cap acces a node perque serveixi quelcom
-*/
+// Executem tot al client.
+// No es fá cap acces a node perque serveixi quelcom
 
 addEventListener('load', inici);
 
@@ -13,9 +11,28 @@ function inici() {
     const url404 = "https://jsonplaceholder.typicode.com/otroendpoint";
     const resultats = document.querySelector("#resultats");
     const subtitul = document.querySelector("#subtitul");
+    const inici = document.querySelector("#inici");
     const btn1 = document.querySelector("#btn1");
     const btn2 = document.querySelector("#btn2");
     const btn3 = document.querySelector("#btn3");
+
+    // Gestió 'inici'. Eliminar el index de sessionStorage
+    inici.addEventListener("click", () => {
+
+        // quan fan click a 'inici', eliminem de sessionStorage
+        // per anar a la pagina principal
+
+        let indexSessionStorage = sessionStorage.getItem('indexSessionStorage');
+        if (!!indexSessionStorage) {
+            sessionStorage.removeItem(sessionStorage.removeItem('indexSessionStorage'));
+        }
+        // important: per fer console.log aquí s´ha de convertir a comentari la 
+        // línia 'location.assign("/static/index/index.html");'
+        // sino no funciona. Encara no sé per qué.
+        // console.log('indexSessionStorage', indexSessionStorage);
+
+        location.assign("/static/index/index.html");
+    });
 
     //Exemple 1 - utilitzant callbacks
     btn1.addEventListener("click", () => {
@@ -29,7 +46,7 @@ function inici() {
                 return;
             }
             console.log('');
-            montarLlistat(JSON.parse(ajax.responseText), resultats);
+            montarLlistat(JSON.parse(ajax.responseText).slice(0, 3), resultats);
             subtitul.innerText = "Callbacks loaded";
 
         });
@@ -47,7 +64,7 @@ function inici() {
                 return response.json()
             })
             .then(llistat => {
-                montarLlistat(llistat, resultats);
+                montarLlistat(llistat.slice(0, 3), resultats);
                 subtitul.innerText = "Promeses loaded";
             }).catch(error => {
                 console.error("Error en promeses", error);
@@ -63,7 +80,7 @@ function inici() {
             const respuesta = await fetch(urlGirls);
             if (respuesta.status !== 200) throw new Error(respuesta.status);
             const llistat = await respuesta.json();
-            montarLlistat(llistat, resultats);
+            montarLlistat(llistat.slice(0, 3), resultats);
             subtitul.innerText = "Async/Await loaded";
         } catch (error) {
             console.error("Problemas en Async", error);

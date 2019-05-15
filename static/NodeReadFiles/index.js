@@ -9,10 +9,29 @@ function inici() {
 
     const resultats = document.querySelector("#resultats");
     const subtitul = document.querySelector("#subtitul");
+    const inici = document.querySelector("#inici");
     const btn1 = document.querySelector("#btn1");
     const btn2 = document.querySelector("#btn2");
     const btn3 = document.querySelector("#btn3");
 
+    // Gestió 'inici'. Eliminar el index de sessionStorage
+    console.log('inici: ', inici);
+    inici.addEventListener("click", () => {
+
+        // quan fan click 'inici', eliminem de sessionStorage
+        // per anar a la pagina principal
+
+        let indexSessionStorage = sessionStorage.getItem('indexSessionStorage');
+        if (!!indexSessionStorage) {
+            sessionStorage.removeItem(sessionStorage.removeItem('indexSessionStorage'));
+        }
+
+        // important: per fer console.log aquí s´ha de convertir a comentari la 
+        // línia 'location.assign("/static/index/index.html");'
+        // sino no funciona. Encara no sé per qué.
+        // console.log('indexSessionStorage', indexSessionStorage);
+        location.assign("/static/index/index.html");
+    });
 
     btn1.addEventListener("click", async() => {
 

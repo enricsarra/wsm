@@ -57,7 +57,11 @@
 //  1.1.o - Modificar '/static/index/index.html' per complicarla a nivell de css i practicar
 //          amb 'position'.
 //  2.0.0 - Primera fase complerta 
-//  2.1.a - Lletra 'sansita' 3D a les pagines principals     
+//  2.1.a - Lletra 'sansita' 3D a la pagina principal '/static/index/index.htm'   
+//  2.1.b - A Batman,Superman,Girls visualitzem 3 elements
+//  2.1.c - Gestió navegació: 'inici' i 'retornar' utilitzan 'sessionStorage',
+//          perque la page principal '/static/index/index.htm', es única y no
+//          son 4. Es gestiona per 'position absolute' i 'displayed'.
 
 
 const terminator = require('./MyFramework').terminator;
