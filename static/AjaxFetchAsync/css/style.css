@@ -201,32 +201,14 @@ main {
     padding: 1em;
 }
 
-
-/*------------------------------------------------------*/
-
-
-/* footer                                               */
-
-
-/*------------------------------------------------------*/
-
 footer {
-    /* background-color: #BBB; */
     background-color: #09c;
-    height: 80px;
-    position: relative;
 }
 
 footer ul {
     color: #E95756;
     text-align: center;
     width: 100%;
-    position: absolute;
-    /* top: 1em;
-    left: 20%; */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 footer ul li {
@@ -337,4 +319,16 @@ footer ul li a::after {
         font-size: 1.4em;
         font-weight: 600;
     }
+}
+
+
+}
+#menu li:hover>input[type="checkbox"]+.sub-menu {
+    display: block;
+}
+.discipline a {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
 }

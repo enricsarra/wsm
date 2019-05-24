@@ -181,7 +181,7 @@ main {
     display: inline-block;
     vertical-align: middle;
     color: rgb(210, 55, 115);
-    font-size: 1.3em;
+    font-size: 0.8em;
     font-weight: 600;
     font-style: italic;
     text-align: center;
@@ -225,32 +225,14 @@ main {
     margin: 1em auto;
 }
 
-
-/*------------------------------------------------------*/
-
-
-/* footer                                               */
-
-
-/*------------------------------------------------------*/
-
 footer {
-    /* background-color: #BBB; */
     background-color: #09c;
-    height: 80px;
-    position: relative;
 }
 
 footer ul {
     color: #E95756;
     text-align: center;
     width: 100%;
-    position: absolute;
-    /* top: 1em;
-    left: 20%; */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 footer ul li {

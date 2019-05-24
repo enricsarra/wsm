@@ -63,9 +63,11 @@
 //          perque la page principal '/static/index/index.htm', es única y no
 //          son 4. Es gestiona per 'position absolute' i 'displayed'.
 //  2.1.d - Css a  Tv Series - Fitxers interns - Usuaris externs.  
-//          - Menú navegació.
-//          - Cuadrats responsive
-//          - Footer animat: hi ha els links que he adaptat.
+//              - Menú navegació.
+//              - Cuadrats responsive
+//              - Footer animat: hi ha els links que he adaptat.
+//  2.1.e - Modificació posicionament del footer
+//          Font-size lletra etiquetes botons     
 
 
 
