@@ -177,7 +177,7 @@ main {
     display: inline-block;
     vertical-align: middle;
     color: snow;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 600;
     font-style: italic;
     text-align: center;
@@ -319,16 +319,4 @@ footer ul li a::after {
         font-size: 1.4em;
         font-weight: 600;
     }
-}
-
-
-}
-#menu li:hover>input[type="checkbox"]+.sub-menu {
-    display: block;
-}
-.discipline a {
-    font-size: 1.4em;
-    font-weight: 600;
-}
-
 }
