@@ -62,6 +62,12 @@
 //  2.1.c - Gestió navegació: 'inici' i 'retornar' utilitzan 'sessionStorage',
 //          perque la page principal '/static/index/index.htm', es única y no
 //          son 4. Es gestiona per 'position absolute' i 'displayed'.
+//  2.1.d - Css a  Tv Series - Fitxers interns - Usuaris externs.  
+//          - Menú navegació.
+//          - Cuadrats responsive
+//          - Footer animat: hi ha els links que he adaptat.
+
+
 
 
 const terminator = require('./MyFramework').terminator;

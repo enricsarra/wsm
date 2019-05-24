@@ -46,6 +46,10 @@ function inici() {
             let body = await responseServer.text();
             resultats.innerHTML = '';
             resultats.innerHTML = body;
+            const divResultats = document.querySelectorAll("div.resultats");
+            divResultats.forEach(item => {
+                item.classList.add("node-http");
+            });
 
         } catch (error) {
             console.error("Problemes al importar per 'http.get'", error);
@@ -67,6 +71,10 @@ function inici() {
             let body = await responseServer.text();
             resultats.innerHTML = '';
             resultats.innerHTML = body;
+            const divResultats = document.querySelectorAll("div.resultats");
+            divResultats.forEach(item => {
+                item.classList.add("node-fetch");
+            });
 
         } catch (error) {
             console.error("Problemas al importar per 'fetch'", error);
@@ -86,6 +94,10 @@ function inici() {
             let body = await responseServer.text();
             resultats.innerHTML = '';
             resultats.innerHTML = body;
+            const divResultats = document.querySelectorAll("div.resultats");
+            divResultats.forEach(item => {
+                item.classList.add("node-axios");
+            });
 
         } catch (error) {
             console.error("Problemas en Async", error);
@@ -105,6 +117,10 @@ function inici() {
             let body = await responseServer.text();
             resultats.innerHTML = '';
             resultats.innerHTML = body;
+            const divResultats = document.querySelectorAll("div.resultats");
+            divResultats.forEach(item => {
+                item.classList.add("node-batman-superman");
+            });
 
         } catch (error) {
             console.error("Problemas en Async", error);

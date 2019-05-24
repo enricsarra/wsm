@@ -45,7 +45,7 @@ function inici() {
                 console.log("Error!", e.target.status);
                 return;
             }
-            console.log('');
+
             montarLlistat(JSON.parse(ajax.responseText).slice(0, 3), resultats);
             subtitul.innerText = "Callbacks loaded";
 

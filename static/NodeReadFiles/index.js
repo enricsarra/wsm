@@ -15,7 +15,6 @@ function inici() {
     const btn3 = document.querySelector("#btn3");
 
     // Gestió 'inici'. Eliminar el index de sessionStorage
-    console.log('inici: ', inici);
     inici.addEventListener("click", () => {
 
         // quan fan click 'inici', eliminem de sessionStorage
@@ -65,7 +64,7 @@ function inici() {
 
             if (responseServer.status !== 200) throw new Error(responseServer.status);
             let body = await responseServer.text();
-            console.log('body es : ', body);
+            // console.log('body es : ', body);
 
             resultats.innerHTML = body;
 

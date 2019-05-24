@@ -37,12 +37,12 @@ const mime = {
 // llegir montar html per imatges
 const getImg = (name) => {
     const imgTemplate = templater `<figure>
-    <img alt="${ 'name' }" src="${ 'src' }">
+    <img class="card" alt="${ 'name' }" src="${ 'src' }">
     <figcaption>${ 'caption' }</figcaption>
 </figure>`;
     const img = {
         name: name,
-        src: `/static/NodeReadFiles/${name}`,
+        src: `/static/NodeReadFiles/img/${name}`,
         alt: 'El cor del javascript',
         caption: 'Les entranyes del javascript'
     };
@@ -108,13 +108,13 @@ const montarHtmlUsers = (contentFile) => {
     });
 
     // definim la template
-    const userTemplate = templater `<p> <span> id : ${'id'}</span></p>
+    const userTemplate = templater `<div class="resultats"> <p> <span> id : ${'id'}</span></p>
     <p> <span> name : ${'name'}</span></p>
     <p> <span> username : ${'username'}</span></p>
     <p> <span> email : ${'email'}</span></p>
     <p> <span> address : ${'street'} - ${'suite'} - ${'city'}</span></p>
     <p> <span> phone : ${'phone'}</span></p>
-    <br>
+    </div>
 `;
     // per cada usuari construim la template i retornem el html montat
     let myTemplateUsers = subContentFile.map(user => userTemplate(user)).join('\n');
@@ -140,13 +140,13 @@ const montarHtmlBatmanSuperman = (contentFile) => {
     //console.log(subContentFile);
 
     // definim la template
-    const userTemplate = templater `<p> <span> id : ${'id'}</span></p>
+    const userTemplate = templater `<div class="resultats"> <p> <span> id : ${'id'}</span></p>
     <p> <span> name : ${'name'}</span></p>
     <p> <span> score : ${'score'}</span></p>
     <p> <span> url : ${'url'}</span></p>
     <p> <span> image : <a href=${'image' }>Enllaç a la imatge</a></span></p>
     <p> <span> premiered : ${'premiered'}</span></p>
-    <br>
+    </div>
 `;
 
     // per cada usuari construim la template i retornem el html montat
@@ -369,7 +369,7 @@ function nodeReadImg(response, pathname, postData, _extname) {
             response.write(`<p>Error ${contentFile} inexistent</p>`);
             response.end();
         }
-    })('prototype.jpg');
+    })('prototype.png');
 
 }
 
@@ -516,8 +516,8 @@ function formulari1(response, pathname, postData) {
     let body = `
         <h3> Fem molt espai pel texte per provar els 'chunks' del 'post </h3>
         <form id='formulari1'  action="" method="post" onsubmit = "return false" >
-        <textarea name="text" rows="20" cols="60"></textarea>
-        <textarea name="text1" rows="20" cols="60"></textarea>
+        <textarea name="text" rows="20" cols="30"></textarea>
+        <textarea name="text1" rows="20" cols="30"></textarea>
         <input type="submit" value="Enviar texte" />
         </form>
         <h3> Aquí es veurás el que has teclejat al formulari </h3>
