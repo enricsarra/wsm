@@ -352,10 +352,10 @@ function nodeReadImg(response, pathname, postData, _extname) {
 
     (async(imatgeLlegir) => {
         try {
-            let vec = imatgeLlegir.split('.');
-            console.log(vec);
+            let vec = imatgeLlegir.split('.'); // vec = [ 'prototype', 'png' ]
+            // console.log(vec);
 
-            let extName = vec[vec.length - 1]; // extName = prototype.js
+            let extName = vec[vec.length - 1]; // extName = prototype.png
             let contentType = mime[extName];
 
             response.writeHead(200, { 'Content-Type': `${contentType} ; charset=UTF-8` });

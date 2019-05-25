@@ -187,6 +187,12 @@ main {
     text-align: center;
 }
 
+.discipline:not(:last-child) a {
+    /* Sol visualitzem el texte del cuart button*/
+    /* Si posem visibility:hidden, no respon al fer click */
+    opacity: 0;
+}
+
 
 /*.discipline_name{
   // opcion a lo codificado y asteriscado en a {}.

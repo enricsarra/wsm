@@ -181,6 +181,9 @@ main {
     font-weight: 600;
     font-style: italic;
     text-align: center;
+    /* de moment no cal visualitzar el texte */
+    /* Si posem visibility:hidden, no respon al fer click */
+    opacity: 0;
 }
 
 

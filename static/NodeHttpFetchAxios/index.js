@@ -34,7 +34,7 @@ function inici() {
 
     btn1.addEventListener("click", async() => {
 
-        subtitul.innerText = `Client:Petició fetch & async - Server: http.get convertit amb 'promise' i serveix el resultat`;
+        subtitul.innerText = `Persones loaded. Petició server: "https.get"`;
 
         const url = '/nodeHttp';
         const resultats = document.querySelector("#resultats");
@@ -59,8 +59,7 @@ function inici() {
 
 
     btn2.addEventListener("click", async() => {
-        subtitul.innerText = `Client:Petició fetch & async - Server: petició fetch i serveix el resultat`;
-
+        subtitul.innerText = `Persones loaded. Petició server: "fetch"`;
         const url = '/nodeFetch';
         const resultats = document.querySelector("#resultats");
 
@@ -83,7 +82,7 @@ function inici() {
     });
 
     btn3.addEventListener("click", async() => {
-        subtitul.innerText = `Client:Petició fetch & async - Server: petició axios i serveix el resultat`;
+        subtitul.innerText = `Persones loaded. Petició server: "axios"`;
         const url = '/nodeAxios';
         const resultats = document.querySelector("#resultats");
 
@@ -106,7 +105,7 @@ function inici() {
     });
 
     btn4.addEventListener("click", async() => {
-        subtitul.innerText = `Client:Petició fetch & async - Server: petició axios i serveix les series de Batman i Superman classificades per data estrena`;
+        subtitul.innerText = `Series Tv loaded. Petició server: "axios"`;
         const url = '/nodeBatmanSuperman';
         const resultats = document.querySelector("#resultats");
 

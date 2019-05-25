@@ -67,7 +67,10 @@
 //              - Cuadrats responsive
 //              - Footer animat: hi ha els links que he adaptat.
 //  2.1.e - Modificació posicionament del footer
-//          Font-size lletra etiquetes botons     
+//          Font-size lletra etiquetes botons   
+//  2.1.f - Canviar textes.
+//          opacity:0 a segons quins textes del buttons circulars
+//          perque les seves imatges ja ho diuen tot. 
 
 
 

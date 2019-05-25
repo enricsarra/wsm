@@ -34,9 +34,9 @@ function inici() {
 
     btn1.addEventListener("click", async() => {
 
-        subtitul.innerText = `Client:Petició fetch & async - Server: fs.readfile convertit amb 'promise' i serveix el fitxer .html`;
+        subtitul.innerText = `/partial/article.html loaded `;
 
-        const url = '/nodeReadHtml';
+        const url = '/c';
         const resultats = document.querySelector("#resultats");
 
         try {
@@ -54,7 +54,7 @@ function inici() {
 
 
     btn2.addEventListener("click", async() => {
-        subtitul.innerText = `Client:Petició fetch & async - Server: fs.readfile convertit amb 'promise' i serveix el fitxer .txt`;
+        subtitul.innerText = `/partial/article.txt loaded `;
 
         const url = '/nodeReadTexte';
         const resultats = document.querySelector("#resultats");
@@ -74,7 +74,7 @@ function inici() {
     });
 
     btn3.addEventListener("click", async() => {
-        subtitul.innerText = `Client:Petició fetch & async - Server: Retorna el html i serveix la imatge /partial/prototype.jpg.`;
+        subtitul.innerText = `/partial/prototype.png.`;
 
         const url = '/nodeReadImg';
         const resultats = document.querySelector("#resultats");
