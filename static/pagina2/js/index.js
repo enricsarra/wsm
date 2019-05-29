@@ -27,3 +27,16 @@ function inici() {
         location.assign("/static/index/index.html");
     });
 }
+
+jQuery(document).ready(function($) {
+
+    $('#menu-handler').on('click', function() {
+
+        $(this).fadeOut(300, function() {
+            $(this).toggleClass('icon-close').fadeIn(300);
+        });
+
+        $('nav').toggleClass('displayed');
+    });
+
+});

@@ -1,6 +1,6 @@
 // Arranquem servidor
 
-const myVersio = "v 2.1.f";
+const myVersio = "v 2.1.g";
 
 const http = require("http");
 const url = require("url");
