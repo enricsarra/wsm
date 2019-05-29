@@ -72,8 +72,9 @@
 //          opacity:0 a segons quins textes del buttons circulars
 //          perque les seves imatges ja ho diuen tot. 
 //  2.1.g - Canviar css pagina1 i pagina2. 
-//          Simplificar diseny pagina principal de pagina efectes especials
-//          en el que respecta als iconos. 
+//          Simplificar diseny pagina principal de pagina efectes 
+//          especials en el que respecta als iconos. 
+//  2.1.h - Modificar textes animats pagina1 i pagina1       
 
 
 
