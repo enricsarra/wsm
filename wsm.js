@@ -74,7 +74,11 @@
 //  2.1.g - Canviar css pagina1 i pagina2. 
 //          Simplificar diseny pagina principal de pagina efectes 
 //          especials en el que respecta als iconos. 
-//  2.1.h - Modificar textes animats pagina1 i pagina1       
+//  2.1.h - Modificar textes animats pagina1 i pagina1   
+//  2.1.i - Incloure el web-component "wsm-menu-overlay" a "static/pagina1/pagina1.html" 
+//          El css des components es troba a "static/wsm-component/main.js".
+//          Aquest fitxer es el que monta el "Webpack" perque no hi hagi errors de rutes acces.
+//          Es el aspecte negatiu. El servidor wsm no es tan intel.ligent.
 
 
 
