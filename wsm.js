@@ -79,6 +79,7 @@
 //          El css des components es troba a "static/wsm-component/main.js".
 //          Aquest fitxer es el que monta el "Webpack" perque no hi hagi errors de rutes acces.
 //          Es el aspecte negatiu. El servidor wsm no es tan intel.ligent.
+//  2.1.j - Modificar /static/NodeReadFiles per definir estils amb javascript 
 
 
 

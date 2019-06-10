@@ -5,6 +5,16 @@
 
 addEventListener('load', inici);
 
+// crear fulla style particular per el html retornat per els buttons
+let fullaStyle = "";
+if (fullaStyle) {
+    eliminarFullaStyle()
+};
+crearFullaStyle();
+fullaStyle.innerHTML = cssFullaStyle();
+document.head.appendChild(fullaStyle);
+
+
 function inici() {
 
     const resultats = document.querySelector("#resultats");
@@ -36,8 +46,15 @@ function inici() {
 
         subtitul.innerText = `/partial/article.html loaded `;
 
-        const url = '/c';
-        const resultats = document.querySelector("#resultats");
+        const url = '/nodeReadHtml';
+
+        esborraFillsResultats("#resultatsHtml");
+        esborraFillsResultats("#resultatsTxt");
+        esborraFillsResultats("#resultatsImg");
+        document.querySelector("#resultatsTxt").style.padding = null;
+
+
+        const resultats = document.querySelector("#resultatsHtml");
 
         try {
             const responseServer = await fetch(url);
@@ -57,7 +74,16 @@ function inici() {
         subtitul.innerText = `/partial/article.txt loaded `;
 
         const url = '/nodeReadTexte';
-        const resultats = document.querySelector("#resultats");
+
+        esborraFillsResultats("#resultatsHtml");
+        esborraFillsResultats("#resultatsTxt");
+        esborraFillsResultats("#resultatsImg");
+
+        const resultats = document.querySelector("#resultatsTxt");
+        // no podem posar el padding al css perque es mostra
+        // la div buida amb el seu background-color 
+
+        resultats.style.padding = "2em";
 
         try {
             const responseServer = await fetch(url);
@@ -77,7 +103,13 @@ function inici() {
         subtitul.innerText = `/partial/prototype.png.`;
 
         const url = '/nodeReadImg';
-        const resultats = document.querySelector("#resultats");
+
+        esborraFillsResultats("#resultatsHtml");
+        esborraFillsResultats("#resultatsTxt");
+        esborraFillsResultats("#resultatsImg");
+        document.querySelector("#resultatsTxt").style.padding = null;
+
+        const resultats = document.querySelector("#resultatsImg");
 
         try {
             const responseServer = await fetch(url);
@@ -91,4 +123,71 @@ function inici() {
         }
 
     });
+}
+
+function eliminarFullaStyle() {
+    const node = document.getElementById('estil-resultats');
+    node.parentNode.removeChild(node);
+}
+
+function crearFullaStyle() {
+    fullaStyle = document.createElement('style');
+    fullaStyle.id = "estil-resultats";
+}
+
+function cssFullaStyle() {
+    let html =
+        `   
+            #resultatsHtml, #resultatsTxt, #resultatsImg {
+                margin: 2% auto;
+            }
+            
+            #resultatsHtml {
+                display: flex;
+                height: auto;
+                flex-direction:column;
+                margin: 2% auto;
+            } 
+            #resultatsHtml header{
+                background-color: #09c;
+                height: 5em;
+                line-height: 5em;
+                margin: 0px;
+                text-align: center;
+            }
+            #resultatsHtml footer{
+                background-color: #09c;
+                height: 5em;
+                line-height: 5em;
+                text-align: center;
+            }
+            #resultatsHtml main{
+                background-color: rgb(200, 213, 224);
+                flex-grow: 1;
+                padding: 2em;
+            }  
+            
+            #resultatsTxt {
+                background-color: rgb(200, 213, 224);
+                
+            } 
+
+            #resultatsImg {
+                margin: 4% auto;
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            
+        `
+    return html
+}
+
+function esborraFillsResultats(resultat) {
+    console.log("resultat", resultat);
+    let element = document.querySelector(resultat);
+    console.log("element", element);
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
 }
