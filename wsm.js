@@ -80,9 +80,10 @@
 //          Aquest fitxer es el que monta el "Webpack" perque no hi hagi errors de rutes acces.
 //          Es el aspecte negatiu. El servidor wsm no es tan intel.ligent.
 //  2.1.j - Modificar /static/NodeReadFiles per definir estils amb javascript 
-
-
-
+//  2.1.k - Modificar el css /static/pagina1 per que al apartat ABOUT igualar
+//          els iconos independentment de la quantitat de la descripció.
+//          #about article.flex-item { display: flex }
+//          #about .description {  flex-grow: 1 } Creix tot el que pot
 
 
 

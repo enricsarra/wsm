@@ -894,6 +894,12 @@ body {
 #about .description {
     font-size: .95em;
     line-height: 1.4;
+    flex-grow: 1;
+}
+
+#about article.flex-item {
+    display: flex;
+    flex-direction: column;
 }
 
 #about .social {
