@@ -84,7 +84,11 @@
 //          els iconos independentment de la quantitat de la descripció.
 //          #about article.flex-item { display: flex }
 //          #about .description {  flex-grow: 1 } Creix tot el que pot
-
+//  2.1.l - Modificar 'function llistardirectori' de 'requestHandlers.js'
+//          Abans 'let body' tenia definit un html complert (amb head, etc).
+//          Funcionaba bé, perque era el navegador el que no carreba el head perque no calía.
+//          S´ha modificat 'let body' per a que retorni solament el resultat del llistat.
+//          Això es així perque retorna el resultat a una petició 'fetch'.
 
 
 const terminator = require('./MyFramework').terminator;

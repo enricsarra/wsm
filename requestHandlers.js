@@ -554,20 +554,10 @@ function llistardirectori(response) {
         let nouStdout = stdout.replace(/\s/gi, ' <br> '); // sustituim blanc amb <br>
 
         let body = `
-        <!doctype html>
-        <html>
-        <head>
-        <title>Llistat directori</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        </head>
-        <body>
+        
         <h2> Llistat del directori ${__dirname} </h2>
         <p> ${nouStdout} </p>
-        </body>
-        </html>`;
-
-
+        </body>`;
 
         response.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
         response.write(`${ body }`);
