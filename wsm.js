@@ -89,6 +89,8 @@
 //          Funcionaba bé, perque era el navegador el que no carreba el head perque no calía.
 //          S´ha modificat 'let body' per a que retorni solament el resultat del llistat.
 //          Això es així perque retorna el resultat a una petició 'fetch'.
+//  2.1.m - Afegir la funció "htmDinamic" a MyFramework.js.
+//          A MyFramework.js es pot veure com s'ha d'utilitzar.
 
 
 const terminator = require('./MyFramework').terminator;

@@ -447,6 +447,8 @@ Object.defineProperty(MyFramework.Node, 'Process', { writable: false, configurab
 Object.defineProperty(MyFramework.Node.Process, 'Terminator', { writable: false, configurable: false });
 
 MyFramework.namespace("Node.Utils").Templates = (function() {
+    
+// http://www.etnassoft.com/2016/10/05/template-strings-en-es6-estudiando-las-nuevas-plantillas-de-cadena-en-javascript/
 
     function templater(strings, ...keys) {
         return function(data) {
@@ -481,6 +483,103 @@ console.info(myTemplate);
 Object.defineProperty(MyFramework.Node, 'Utils', { writable: false, configurable: false });
 Object.defineProperty(MyFramework.Node.Utils, 'Templates', { writable: false, configurable: false });
 
+MyFramework.namespace("Node.Utils").DinamicTemplates = (function() {
+    
+    // http://www.etnassoft.com/2016/10/05/template-strings-en-es6-estudiando-las-nuevas-plantillas-de-cadena-en-javascript/
+    
+    function htmlDinamic( literalSections, ...substs ) {
+        // Utilitzem el literal crud per no  interpretar
+        // caracters raros.
+    let raw = literalSections.raw;
+ 
+    let result = '';
+ 
+    substs.forEach( ( subst, i ) => {
+        // Emmagatzemem el literal que precedeix a la
+        // sustitució actual
+        let lit = raw[ i ];
+ 
+        // En l'exemple, map () retorna un array:
+        // Si la substitució és un array (i no una cadena),
+        // la convertim.
+        if ( Array.isArray( subst ) ) {
+            subst = subst.join( '' );
+        }
+ 
+        // Si la substitució està precedida d'un signe de dòlar,
+        // escapem caràcters (cometes, salts de línia ...).
+        // Prèviament vam comprovar que es tracti d'una cadena i
+        // no d'un número.
+        if ( lit.endsWith( '$' ) ) {
+            subst = isNaN( subst ) ? htmlEscape( subst ) : subst;
+            lit = lit.slice( 0, -1 );
+        }
+        result += lit;
+        result += subst;
+    } );
+ 
+    // Eliminem l'últim literal, el qual sempre és una
+    // cadena buida
+    result += raw[ raw.length - 1 ];
+ 
+    return result; 
+    }
+
+    function htmlEscape ( str ) {
+        return str.replace( /&/g, '&' )
+            .replace( />/g, '>' )
+            .replace( /</g, '<' )
+            .replace( /"/g, '"' )
+            .replace( /'/g, '&#39;' )
+            .replace( /`/g, '&#96;' );
+        }
+
+
+        return { // revealing module pattern. sames names
+            htmlDinamic: htmlDinamic
+        };
+    })();
+    
+    /* 
+    var tmpl = users => htmlDinamic`
+    <table>
+        ${ users.map( user => htmlDinamic`
+            <tr>
+                <td>$${ user.id }</td>
+                <td>$${ user.name }</td>
+                <td>$${ user.email }</td>
+                <td>$${ user.role }</td>
+            </tr>
+        ` ) }
+    </table>
+`;
+
+var users = [
+    {
+        id: 1,
+        name: 'Yasumi Matsuno',
+        email: 'yasumi_matsuno@example.com',
+        role: 'director'
+    }, {
+        id: 2,
+        name: '<Hiroshi Minagawa>',
+        email: 'hiroshi_minagawa@example.com',
+        role: 'artist'
+    }, {
+        id: 3,
+        name: 'Akihiko Yoshida',
+        email: 'akihiko_yoshida@example.com',
+        role: 'artist'
+    }
+];
+
+console.info( tmpl( users ) );  
+    */
+    
+    // Evitem que es puguin modificar els metodes de MyFramework.Util
+    /* Object.defineProperty(MyFramework.Node, 'Utils', { writable: false, configurable: false }); */
+    Object.defineProperty(MyFramework.Node.Utils, 'DinamicTemplates', { writable: false, configurable: false });
+    
 // ----------------------------------
 // Exportacions
 // ----------------------------------
@@ -579,3 +678,42 @@ var pics = [{
 var myTemplateImg = pics.map(pic => imgTemplate(pic)).join('\n');
 console.info(myTemplate);
 */
+
+module.exports.htmlDinamic = MyFramework.Node.Utils.DinamicTemplates.htmlDinamic;
+
+/*  Exemple importació 
+const htmlDinamic = require('./MyFramework').htmlDinamic;
+    var tmpl = users => htmlDinamic`
+    <table>
+        ${ users.map( user => htmlDinamic`
+            <tr>
+                <td>$${ user.id }</td>
+                <td>$${ user.name }</td>
+                <td>$${ user.email }</td>
+                <td>$${ user.role }</td>
+            </tr>
+        ` ) }
+    </table>
+`;
+
+var users = [
+    {
+        id: 1,
+        name: 'Yasumi Matsuno',
+        email: 'yasumi_matsuno@example.com',
+        role: 'director'
+    }, {
+        id: 2,
+        name: '<Hiroshi Minagawa>',
+        email: 'hiroshi_minagawa@example.com',
+        role: 'artist'
+    }, {
+        id: 3,
+        name: 'Akihiko Yoshida',
+        email: 'akihiko_yoshida@example.com',
+        role: 'artist'
+    }
+];
+
+console.info( tmpl( users ) );  
+    */
