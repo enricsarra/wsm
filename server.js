@@ -1,6 +1,6 @@
 // Arranquem servidor
 
-const myVersio = "v 2.1.m";
+const myVersio = "v 2.1.n";
 
 const http = require("http");
 const url = require("url");
@@ -24,6 +24,8 @@ function startServer(route, handle) {
         const _basename = path.basename(request.url);
 
         console.log(` *** Peticio per ${ pathname } rebuda. *** `);
+
+        /* console.info('query-query::', url.parse(request.url, true).query); */
 
         /* console.log(`
         parametres ${ method } : ${ JSON.stringify(query) } // de objecte a string

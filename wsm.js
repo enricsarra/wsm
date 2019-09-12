@@ -91,6 +91,8 @@
 //          Això es així perque retorna el resultat a una petició 'fetch'.
 //  2.1.m - Afegir la funció "htmDinamic" a MyFramework.js.
 //          A MyFramework.js es pot veure com s'ha d'utilitzar.
+//  2.1.n - Afegir la carpeta wsm-component-fonts. El fitcher wsm-component-fonts/dist/main.js es copía a wsm-component/main.js que es la ruta que crida el client.
+//         
 
 
 const terminator = require('./MyFramework').terminator;
